@@ -1,0 +1,15 @@
+[user]
+	name = Jesús Iglesias Iglesias
+	email = dovimeister@gmail.com
+	signingkey = 30AB608D0FC67ECB 
+[core]
+	editor = vim
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[alias]
+	amend = commit --amend --no-edit
+	adog = log --all --decorate --oneline --graph

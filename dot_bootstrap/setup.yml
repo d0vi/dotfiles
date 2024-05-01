@@ -1,0 +1,57 @@
+---
+- name: Machine setup
+  hosts: localhost
+  become: true
+  connection: local
+  gather_facts: true
+
+  tasks:
+    - name: Get my user
+      ansible.builtin.set_fact:
+        remote_regular_user: "{{ ansible_env.SUDO_USER or ansible_user_id }}"
+
+    - name: Remove LibreOffice packages
+      ansible.builtin.dnf:
+        name: "libreoffice*"
+        state: absent
+        use_backend: dnf5
+
+    - name: Upgrade all packages
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
+        use_backend: dnf5
+
+    - name: Install packages
+      ansible.builtin.dnf:
+        name:
+          - btop
+          - vim
+          - zsh
+          - tmux
+          - ffmpeg-free
+          - gnome-console
+          - fzf
+          - tlrd
+          - bat
+        state: present
+        use_backend: dnf5
+
+    - name: Change shell to zsh
+      ansible.builtin.user:
+        name: "{{ remote_regular_user }}"
+        shell: /usr/bin/zsh
+
+    - name: Install Flatpak packages
+      community.general.flatpak:
+        name:
+          - com.jetbrains.IntelliJ-IDEA-Community 
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal 
+          - rest.insomnia.Insomnia
+          - io.github.alainm23.planify
+          - org.gnome.gitlab.somas.Apostrophe
+        state: present
+
+    - name: Install packages from Brewfile
+      ansible.builtin.shell: brew bundle
