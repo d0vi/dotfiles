@@ -55,3 +55,10 @@
 
     - name: Install packages from Brewfile
       ansible.builtin.shell: brew bundle
+
+    - name: Install SDKMAN!
+      become: no
+      ansible.builtin.shell: "curl -s 'https://get.sdkman.io' | bash"
+
+    - name: Install JDK default version
+      ansible.builtin.shell: sdk install java
