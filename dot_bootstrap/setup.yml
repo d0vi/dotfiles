@@ -12,8 +12,11 @@
 
     - name: Remove LibreOffice packages
       ansible.builtin.dnf:
-        name: "libreoffice*"
+        name:
+          - unoconv
+          - "libreoffice*"
         state: absent
+        autoremove: true
         use_backend: dnf5
 
     - name: Upgrade all packages
