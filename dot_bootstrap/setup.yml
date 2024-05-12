@@ -35,7 +35,7 @@
           - ffmpeg-free
           - gnome-console
           - fzf
-          - tlrd
+          - tldr
           - bat
         state: present
         use_backend: dnf5
