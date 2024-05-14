@@ -57,7 +57,8 @@
         state: present
 
     - name: Install packages from Brewfile
-      ansible.builtin.shell: brew bundle
+      become: no
+      ansible.builtin.shell: /home/linuxbrew/.linuxbrew/bin/brew bundle
 
     - name: Install SDKMAN!
       become: no
