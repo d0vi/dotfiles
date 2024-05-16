@@ -1,5 +1,3 @@
 tap "homebrew/bundle"
-# GNU compiler collection
-brew "gcc"
 # More intuitive version of du in rust
 brew "dust"
