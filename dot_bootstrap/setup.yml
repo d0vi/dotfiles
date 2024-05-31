@@ -56,10 +56,6 @@
           - org.gnome.gitlab.somas.Apostrophe
         state: present
 
-    - name: Install packages from Brewfile
-      become: no
-      ansible.builtin.shell: /home/linuxbrew/.linuxbrew/bin/brew bundle
-
     - name: Install SDKMAN!
       become: no
       ansible.builtin.shell: "curl -s 'https://get.sdkman.io' | bash"
