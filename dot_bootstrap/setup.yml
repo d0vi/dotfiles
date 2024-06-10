@@ -54,6 +54,7 @@
           - rest.insomnia.Insomnia
           - io.github.alainm23.planify
           - org.gnome.gitlab.somas.Apostrophe
+          - dev.bragefuglseth.Keypunch
         state: present
 
     - name: Install SDKMAN!
