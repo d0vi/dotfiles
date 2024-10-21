@@ -10,6 +10,12 @@
       ansible.builtin.set_fact:
         remote_regular_user: "{{ ansible_env.SUDO_USER or ansible_user_id }}"
 
+    - name: Upgrade all packages
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
+        use_backend: dnf5
+
     - name: Remove LibreOffice packages
       ansible.builtin.dnf:
         name:
@@ -17,13 +23,6 @@
           - "libreoffice*"
         state: absent
         autoremove: true
-        use_backend: dnf5
-
-    - name: Upgrade all packages
-      ansible.builtin.dnf:
-        name: "*"
-        state: latest
-        use_backend: dnf5
 
     - name: Install packages
       ansible.builtin.dnf:
