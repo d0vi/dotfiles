@@ -17,6 +17,3 @@ alias c=chezmoi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="$HOME/bin:$PATH"
-
-export HOMEBREW_NO_ANALYTICS=1
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
