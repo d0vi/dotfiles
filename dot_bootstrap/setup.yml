@@ -28,6 +28,7 @@
         name:
           - btop
           - vim
+          - nvim
           - zsh
           - tmux
           - ffmpeg-free
