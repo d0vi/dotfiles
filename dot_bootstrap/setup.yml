@@ -17,13 +17,11 @@
           - "libreoffice*"
         state: absent
         autoremove: true
-        use_backend: dnf5
 
     - name: Upgrade all packages
       ansible.builtin.dnf:
         name: "*"
         state: latest
-        use_backend: dnf5
 
     - name: Install packages
       ansible.builtin.dnf:
@@ -38,7 +36,6 @@
           - tldr
           - bat
         state: present
-        use_backend: dnf5
 
     - name: Change shell to zsh
       ansible.builtin.user:
