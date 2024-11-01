@@ -53,6 +53,7 @@
           - io.github.alainm23.planify
           - org.gnome.gitlab.somas.Apostrophe
           - dev.bragefuglseth.Keypunch
+          - io.missioncenter.MissionCenter
         state: present
 
     - name: Install SDKMAN!
