@@ -36,6 +36,7 @@
           - fzf
           - tldr
           - bat
+          - cascadia-code-nf-fonts
         state: present
 
     - name: Change shell to zsh
