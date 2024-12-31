@@ -13,3 +13,5 @@
 [alias]
 	amend = commit --amend --no-edit
 	adog = log --all --decorate --oneline --graph
+[tag]
+	gpgSign = true
