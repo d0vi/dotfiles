@@ -2,7 +2,7 @@
 	name = Jesús Iglesias Iglesias
 	email = dovimeister@gmail.com
 [core]
-	editor = vim
+	editor = hx
 [gpg]
 	program = gpg2
 [commit]

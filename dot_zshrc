@@ -9,10 +9,9 @@ RPS1='$(kubectx_prompt_info)'
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="/usr/bin/hx"
 
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="hx ~/.zshrc"
 alias c=chezmoi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
