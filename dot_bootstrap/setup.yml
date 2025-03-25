@@ -28,7 +28,7 @@
         name:
           - btop
           - vim
-          - nvim
+          - neovim
           - zsh
           - tmux
           - ffmpeg-free
@@ -37,7 +37,7 @@
           - tldr
           - bat
           - cascadia-code-nf-fonts
-          - hx
+          - helix
         state: present
 
     - name: Change shell to zsh
