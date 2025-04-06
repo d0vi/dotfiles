@@ -18,6 +18,16 @@
         state: absent
         autoremove: true
 
+    - name: Remove a few default GNOME applications
+      ansible.builtin.dnf:
+        name:
+          - totem
+          - evince
+          - gnome-logs
+          - rhythmbox
+        state: absent
+        autoremove: true
+
     - name: Upgrade all packages
       ansible.builtin.dnf:
         name: "*"
@@ -38,6 +48,8 @@
           - bat
           - cascadia-code-nf-fonts
           - helix
+          - celluloid
+          - papers
         state: present
 
     - name: Change shell to zsh
