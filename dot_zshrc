@@ -11,6 +11,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="/usr/bin/hx"
 
+export PODMAN_COMPOSE_WARNING_LOGS=false
+
 alias zshconfig="hx ~/.zshrc"
 alias c=chezmoi
 
