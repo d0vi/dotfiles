@@ -15,6 +15,7 @@ export PODMAN_COMPOSE_WARNING_LOGS=false
 
 alias zshconfig="hx ~/.zshrc"
 alias c=chezmoi
+alias lg=lazygit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
