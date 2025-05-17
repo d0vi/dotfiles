@@ -8,6 +8,7 @@ HYPHEN_INSENSITIVE="true"
 RPS1='$(kubectx_prompt_info)'
 
 source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
 
 export EDITOR="/usr/bin/hx"
 
@@ -16,6 +17,7 @@ export PODMAN_COMPOSE_WARNING_LOGS=false
 alias zshconfig="hx ~/.zshrc"
 alias c=chezmoi
 alias lg=lazygit
+alias hf='fzf -m --preview="bat --color=always {}" --bind "enter:become(hx {+})"'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
