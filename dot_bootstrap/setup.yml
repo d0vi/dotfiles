@@ -59,7 +59,6 @@
     - name: Install Flatpak packages
       community.general.flatpak:
         name:
-          - com.jetbrains.IntelliJ-IDEA-Community 
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal 
           - rest.insomnia.Insomnia
