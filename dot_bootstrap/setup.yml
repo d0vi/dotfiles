@@ -22,7 +22,6 @@
       ansible.builtin.dnf:
         name:
           - totem
-          - evince
           - gnome-logs
           - rhythmbox
         state: absent
@@ -49,7 +48,6 @@
           - cascadia-code-nf-fonts
           - helix
           - celluloid
-          - papers
           - podman-compose
         state: present
 
