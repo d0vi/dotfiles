@@ -21,7 +21,6 @@
     - name: Remove a few default GNOME applications
       ansible.builtin.dnf:
         name:
-          - totem
           - gnome-logs
           - rhythmbox
         state: absent
@@ -47,7 +46,6 @@
           - bat
           - cascadia-code-nf-fonts
           - helix
-          - celluloid
           - podman-compose
         state: present
 
