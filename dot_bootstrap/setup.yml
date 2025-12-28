@@ -47,6 +47,7 @@
           - cascadia-code-nf-fonts
           - helix
           - podman-compose
+          - fish
         state: present
 
     - name: Change shell to zsh
