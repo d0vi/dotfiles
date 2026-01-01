@@ -48,6 +48,7 @@
           - helix
           - podman-compose
           - fish
+          - difftastic
         state: present
 
     - name: Change shell to zsh

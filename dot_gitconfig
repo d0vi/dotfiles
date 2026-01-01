@@ -14,3 +14,5 @@
 	adog = log --all --decorate --oneline --graph
 [tag]
 	gpgSign = true
+[diff]
+	external = difft
