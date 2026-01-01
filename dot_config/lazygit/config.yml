@@ -1,0 +1,9 @@
+# Default lazygit config: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#default
+
+git:
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
+  overrideGpg: true
+  pagers:
+    - useExternalDiffGitConfig: true
+gui:
+  nerdFontsVersion: "3"
