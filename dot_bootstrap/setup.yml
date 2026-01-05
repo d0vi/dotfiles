@@ -49,6 +49,7 @@
           - podman-compose
           - fish
           - difftastic
+          - k9s
         state: present
 
     - name: Change shell to zsh
