@@ -14,5 +14,7 @@
 	adog = log --all --decorate --oneline --graph
 [tag]
 	gpgSign = true
+[merge]
+	tool = vimdiff
 [diff]
 	external = difft
