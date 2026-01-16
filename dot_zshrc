@@ -20,6 +20,7 @@ alias zshconfig="hx ~/.zshrc"
 alias c=chezmoi
 alias lg=lazygit
 alias hf='fzf -m --preview="bat --color=always {}" --bind "enter:become(hx {+})"'
+alias cc=claude
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
