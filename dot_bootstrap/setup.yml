@@ -31,6 +31,11 @@
         name: "*"
         state: latest
 
+    - name: Enable Ghostty COPR repository
+      community.general.copr:
+        name: scottames/ghostty
+        state: enabled
+
     - name: Install packages
       ansible.builtin.dnf:
         name:
@@ -50,6 +55,7 @@
           - fish
           - difftastic
           - k9s
+          - ghostty
         state: present
 
     - name: Change shell to zsh
