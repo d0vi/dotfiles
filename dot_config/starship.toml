@@ -1,0 +1,20 @@
+format = """
+$directory$git_branch$git_status$java$nodejs$python$rust$golang$cmd_duration
+$character"""
+
+[directory]
+truncation_length = 3
+
+[git_branch]
+format = "[$branch]($style) "
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"

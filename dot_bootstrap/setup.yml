@@ -47,7 +47,6 @@
           - btop
           - vim
           - neovim
-          - zsh
           - tmux
           - ffmpeg-free
           - gnome-console
@@ -64,10 +63,15 @@
           - mise
         state: present
 
-    - name: Change shell to zsh
+    - name: Install starship
+      ansible.builtin.shell: curl -sS https://starship.rs/install.sh | sh -s -- --yes
+      args:
+        creates: /usr/local/bin/starship
+
+    - name: Change shell to fish
       ansible.builtin.user:
         name: "{{ remote_regular_user }}"
-        shell: /usr/bin/zsh
+        shell: /usr/bin/fish
 
     - name: Install Flatpak packages
       community.general.flatpak:
