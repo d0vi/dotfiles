@@ -61,6 +61,7 @@
           - k9s
           - ghostty
           - mise
+          - uv
         state: present
 
     - name: Install starship
@@ -77,11 +78,29 @@
       community.general.flatpak:
         name:
           - com.mattjakeman.ExtensionManager
-          - com.github.tchx84.Flatseal 
+          - com.github.tchx84.Flatseal
           - rest.insomnia.Insomnia
           - io.github.alainm23.planify
           - org.gnome.gitlab.somas.Apostrophe
           - dev.bragefuglseth.Keypunch
           - io.missioncenter.MissionCenter
         state: present
+
+    - name: Install gnome-extensions-cli
+      become: false
+      ansible.builtin.command:
+        cmd: uv tool install gnome-extensions-cli
+        creates: "{{ ansible_facts['env']['HOME'] }}/.local/bin/gext"
+
+    - name: Install GNOME Shell extensions
+      become: false
+      ansible.builtin.command:
+        cmd: "gext --filesystem install {{ item }}"
+      loop:
+        - blur-my-shell@aunetx
+        - weatheroclock@CleoMenezesJr.github.io
+        - runcat@kolesnikov.se
+        - drive-menu@gnome-shell-extensions.gcampax.github.com
+        - gTile@vibou
+        - monitor@astraext.github.io
 
