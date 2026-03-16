@@ -12,3 +12,4 @@ abbr -a c chezmoi
 abbr -a lg lazygit
 abbr -a cc claude
 abbr -a hf 'fzf -m --preview="bat --color=always {}" --bind "enter:become(hx {+})"'
+abbr -a l 'ls -l'
