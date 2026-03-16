@@ -41,6 +41,11 @@
         name: jdxcode/mise
         state: enabled
 
+    - name: Enable lazygit COPR repository
+      community.general.copr:
+        name: dejan/lazygit
+        state: enabled
+
     - name: Install packages
       ansible.builtin.dnf:
         name:
@@ -48,7 +53,6 @@
           - vim
           - neovim
           - tmux
-          - ffmpeg-free
           - gnome-console
           - fzf
           - tldr
@@ -62,6 +66,7 @@
           - ghostty
           - mise
           - uv
+          - lazygit
         state: present
 
     - name: Install starship
