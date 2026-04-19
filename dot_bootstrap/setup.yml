@@ -90,6 +90,7 @@
           - dev.bragefuglseth.Keypunch
           - io.missioncenter.MissionCenter
           - com.github.marhkb.Pods
+          - org.gaphor.Gaphor
         state: present
 
     - name: Install gnome-extensions-cli
