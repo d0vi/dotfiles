@@ -8,3 +8,4 @@ The skill accepts optional arguments:
 2. Run `git status` and `git diff` (scoped to the target files if provided) to understand what changed
 3. If filenames were provided, stage only those files; otherwise use the existing staging area as-is
 4. Write a commit message that follows the observed conventions
+5. Do not add any `Co-Authored-By` trailer
