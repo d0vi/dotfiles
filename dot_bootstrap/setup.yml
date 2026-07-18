@@ -55,6 +55,7 @@
           - tmux
           - gnome-console
           - fzf
+          - gh
           - tldr
           - bat
           - cascadia-code-nf-fonts
