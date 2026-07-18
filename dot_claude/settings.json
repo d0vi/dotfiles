@@ -26,6 +26,16 @@
     "Notion@claude-plugins-official": true,
     "linear@claude-plugins-official": true,
     "vercel@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
-  }
+    "superpowers@claude-plugins-official": true,
+    "caveman@caveman": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
+  "tui": "fullscreen"
 }
